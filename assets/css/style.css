@@ -1,0 +1,110 @@
+:root {
+    --primary-color: #161925;
+    --secondary-color: #fdfffc;
+    --white-color: #fdfffc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--white-color);
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 2%;
+}
+
+.container h1 {
+    font-size: 4rem;
+}
+
+.container p {
+    margin-bottom: 1rem;
+}
+
+.container .text-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5%;
+}
+
+.container input,
+.container button {
+    width: 100%;
+    height: 5rem;
+}
+
+.container input {
+    border: .1rem solid lightgrey;
+    border-radius: 1%;
+    margin-bottom: 1.6rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+}
+
+.container input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.container label {
+    margin-bottom: 1rem;
+}
+
+.container button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.container button:hover {
+    cursor: pointer;
+}
+
+#content-result {
+    padding: 1rem;
+    background-color: rgb(193, 255, 193);
+}
+
+#content-result.invalid {
+    background-color: rgb(255, 200, 200);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+@media (max-width: 530px) {
+    .container .text-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
